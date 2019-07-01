@@ -2374,9 +2374,9 @@ minetest.register_node("default:river_water_flowing", {
 	sounds = default.node_sound_water_defaults(),
 })
 
-
+-- Not changing the itemstring, for sake of compatibility
 minetest.register_node("default:lava_source", {
-	description = "Lava Source",
+	description = "Boiling Oil",
 	drawtype = "liquid",
 	tiles = {
 		{
@@ -2401,7 +2401,7 @@ minetest.register_node("default:lava_source", {
 		},
 	},
 	paramtype = "light",
-	light_source = default.LIGHT_MAX - 1,
+	light_source = default.LIGHT_MAX - 5,
 	walkable = false,
 	pointable = false,
 	diggable = false,
@@ -2420,7 +2420,7 @@ minetest.register_node("default:lava_source", {
 })
 
 minetest.register_node("default:lava_flowing", {
-	description = "Flowing Lava",
+	description = "Flowing Boiling Oil",
 	drawtype = "flowingliquid",
 	tiles = {"default_lava.png"},
 	special_tiles = {
@@ -2447,7 +2447,7 @@ minetest.register_node("default:lava_flowing", {
 	},
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
-	light_source = default.LIGHT_MAX - 1,
+	light_source = default.LIGHT_MAX - 5,
 	walkable = false,
 	pointable = false,
 	diggable = false,
